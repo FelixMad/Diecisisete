@@ -1,0 +1,11 @@
+{
+    "/api": {
+      "target": "https://opendata.aemet.es",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": "/opendata/api"
+      }
+    }
+  }
+  
