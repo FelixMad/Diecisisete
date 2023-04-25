@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Models, Chat, Completion, Image } from './chat-gpt.interface';
+import { environment } from '../../environments/environment';
+
 
 /*
 https://platform.openai.com/docs/api-reference
 */
 
 const urlService:string = "https://api.openai.com/v1";
-const secretKey:string = "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";
-const organization:string = "org-xAxxS6szoiicj16ZdkkgpGPc";
+const secretKey:string = environment.secretKey;
+const organization:string = environment.organization;
 
 const headers:HttpHeaders = new HttpHeaders()
   .set('Authorization', `Bearer ${secretKey}`)
